@@ -28,5 +28,17 @@ def test_fil_and_submit_form(open_and_close_browser):
     browser.all('[id^=react-select][id*=option]').element_by(have.exact_text("Karnal")).should(be.clickable).click()
     browser.element('[id="submit"]').should(be.clickable).click()
 
+#checks
 
+    browser.element('.modal-header').should(have.exact_text('Thanks for submitting the form'))
+    browser.element('//tbody/tr[1]/td[2]').should(have.exact_text('Катрин Заидова'))
+    browser.element('//tbody/tr[2]/td[2]').should(have.exact_text('newemail@mail.ru'))
+    browser.element('//tbody/tr[3]/td[2]').should(have.exact_text('Female'))
+    browser.element('//tbody/tr[4]/td[2]').should(have.exact_text('9998076767'))
+    browser.element('//tbody/tr[5]/td[2]').should(have.exact_text('24 August,1995'))
+    browser.element('//tbody/tr[6]/td[2]').should(have.exact_text('English'))
+    browser.element('//tbody/tr[7]/td[2]').should(have.exact_text('Reading'))
+    browser.element('//tbody/tr[8]/td[2]').should(have.exact_text('bear.jpg'))
+    browser.element('//tbody/tr[9]/td[2]').should(have.exact_text('Koh Samui, Thailand'))
+    browser.element('//tbody/tr[10]/td[2]').should(have.exact_text('Haryana Karnal'))
 
